@@ -6,7 +6,7 @@ $(function (){
     var doctorBot = new DoctorBot();
     var chatStream = new Array();
     var userInput = '';
-    var botOutput = 'Doctor:    Hello! I\'m glad to meet you. Please start describing your symptoms.';
+    var botOutput = 'Doctor:  Hello! I\'m glad to meet you. Please start describing your foundSymptoms.';
 
     if(!$('#chatWindow').val()){
         chatStream.push(botOutput);
@@ -22,9 +22,9 @@ $(function (){
     $("#submit").click(function() {
         var message = $('#messageBar').val();
         if(message) {
-            userInput = 'You:        ' + message;
+            userInput = 'You:     ' + message;
             chatStream.push(userInput);
-            botOutput = 'Doctor:    '+ doctorBot.getBotResponse(message);
+            botOutput = 'Doctor:  '+ doctorBot.getBotResponse(message);
             chatStream.push(botOutput);
 
             $('#chatWindow').val(chatStream.join('\n'));
@@ -38,10 +38,10 @@ $(function (){
     });
 
     $('#reset').click(function () {
-        doctorBot.reset();
+        doctorBot = new DoctorBot();
         chatStream = new Array();
         userInput = '';
-        botOutput = 'Doctor:    Hello! I\'m glad to meet you. Please start describing your symptoms.';
+        botOutput = 'Doctor:  Hello! I\'m glad to meet you. Please start describing your foundSymptoms.';
         chatStream.push(botOutput);
         $('#chatWindow').val(chatStream.join('\n'));
         $('#messageBar').val("");
