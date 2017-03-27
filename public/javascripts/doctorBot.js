@@ -194,5 +194,5 @@ var pickRandom = function (array) {
 
 DoctorBot.prototype.getReport = function () {
     console.log(this.diagReport);
-    return this.diagReport.join(', ');
+    return this.diagReport.join(', ')+'\n\t\t Please click reset to start next session';
 }
