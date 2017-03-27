@@ -86,7 +86,7 @@ var objectToNameArray = function(arrayname){
 
 var genericResponses = {
     generic: ['I couldn\'t understand what you said. Please give from suggested values'],
-    symptomSpecific: ['Like all doctors, I\'m limited in scope. Here are some foundSymptoms I can understand :\n\t\t' + objectToNameArray(botKeywords.symptoms).join(', ')]
+    symptomSpecific: ['Like all doctors, I\'m limited in scope. Here are some symptoms I can understand :\n\t\t' + objectToNameArray(botKeywords.symptoms).join(', ')]
 }
 
 var botQuitStatements = [
