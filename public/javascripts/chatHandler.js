@@ -6,7 +6,7 @@ $(function (){
     var doctorBot = new DoctorBot();
     var chatStream = new Array();
     var userInput = '';
-    var botOutput = 'Doctor:  Hello! I\'m glad to meet you. Please start describing your foundSymptoms.';
+    var botOutput = 'Doctor:  Hello! I\'m glad to meet you. Please start describing your symptoms.';
 
     if(!$('#chatWindow').val()){
         chatStream.push(botOutput);
